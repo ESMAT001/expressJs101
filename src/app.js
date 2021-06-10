@@ -9,7 +9,9 @@ app.set('view engine','hbs' )
 app.use(express.static(publicDirectory))
 
 app.get("",(req,res)=>{
-    res.render("index")
+    res.render("index",{
+        text:"this is text"
+    })
 })
 
 app.get('/help',(req,res)=>{
