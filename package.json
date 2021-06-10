@@ -1,0 +1,11 @@
+{
+  "name": "expressJs101",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ESMAT001/expressJs101.git",
+  "author": "ESMAT001 <esmat10.niazi@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
