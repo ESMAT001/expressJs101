@@ -1,10 +1,14 @@
 const express = require('express');
+const fs = require('fs');
 
 const app = express();
 
+const indexPage=fs.readFileSync(__dirname+'/index.html',{
+    encoding:"utf-8"
+})
+
 app.get('/', (req,res)=>{
-    res.send("hello world!")
-    // console.log(req)
+    res.send(indexPage)
 })
 
 app.listen(3000,()=>{
