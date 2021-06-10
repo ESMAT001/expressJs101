@@ -7,11 +7,8 @@ const publicDirectory=path.join(__dirname,"../public")
 
 app.use(express.static(publicDirectory))
 
-app.get('/', (req, res) => {
-    // const indexPage = fs.readFileSync(path.join(__dirname, '../public/index.html'), {
-    //     encoding: "utf-8"
-    // })
-    res.send("<h1>index</h1>")
+app.get('/help',(req,res)=>{
+    res.send("help")
 })
 
 app.listen(3000, () => {
