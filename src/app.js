@@ -3,19 +3,23 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const publicDirectory=path.join(__dirname,"../public")
+const publicDirectory = path.join(__dirname, "../public")
 
-app.set('view engine','hbs' )
+app.set('view engine', 'hbs')
 app.use(express.static(publicDirectory))
 
-app.get("",(req,res)=>{
-    res.render("index",{
-        text:"this is text"
+app.get("", (req, res) => {
+    res.render("index", {
+        text: "this is text"
     })
 })
 
-app.get('/help',(req,res)=>{
+app.get('/help', (req, res) => {
     res.send("help")
+})
+
+app.get("*",(req,res)=>{
+    res.send("<h1>404 NOT FOUND!</h1>")
 })
 
 app.listen(3000, () => {
