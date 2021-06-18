@@ -23,6 +23,10 @@ app.get('/help', (req, res) => {
     res.send("help")
 })
 
+app.get('/img',(req,res)=>{
+    
+})
+
 app.get("*",(req,res)=>{
     res.send("<h1>404 NOT FOUND!</h1>")
 })
