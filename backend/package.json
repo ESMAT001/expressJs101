@@ -1,0 +1,14 @@
+{
+  "name": "movieEra",
+  "version": "1.0.0",
+  "description": "Movie  streaming and download app",
+  "main": "index.js",
+  "author": "ESMAT001",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "got": "^11.8.2",
+    "jsdom": "^16.6.0",
+    "mongodb": "^3.6.9"
+  }
+}
