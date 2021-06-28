@@ -16,7 +16,6 @@ async function main() {
         console.log(poster_path, backdrop_path, ++count)
     })
 
-
 }
 
 
