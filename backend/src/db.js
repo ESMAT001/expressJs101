@@ -8,20 +8,18 @@ const client = new MongoClient(uri, {
     useUnifiedTopology: true,
 });
 
+let database;
 
 module.exports = async function connectToDb(dbName) {
     try {
+        if (database) return database;
+        console.log('creating new db')
         await client.connect();
         const db = client.db(dbName);
         await db.command({ ping: 1 });
         console.log("Connected successfully to db server");
-        return {
-            db,
-            async close() {
-                await client.close();
-                console.log('db connection closed')
-            }
-        }
+        database = db
+        return db
     } catch (err) {
         await client.close();
     }
