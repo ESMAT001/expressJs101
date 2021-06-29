@@ -1,25 +1,11 @@
 const metaData = require('../../utils')
 const got = require('got');
+const { projectionFields } = metaData
 
 const retryLimit = 4
 const timeOutLimit = 20 * 1000
 
-const projectionFields = {
-    _id: false,
-    adult: false,
-    belongs_to_collection: false,
-    budget: false,
-    homepage: false,
-    imdb_id: false,
-    production_companies: false,
-    production_countries: false,
-    revenue: false,
-    spoken_languages: false,
-    video: false,
-    vote_count: false,
-    videos: false,
-    download_links: false
-}
+
 
 async function apiCallForIds(movieCount) {
     let page = 1

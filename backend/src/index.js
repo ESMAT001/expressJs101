@@ -9,9 +9,6 @@ const port = 3000
 server.use('/api', apiRouter)
 server.use('/image',imageRouter)
 
-// server.get('/testImg', (req, res) => {
-//     res.send("<img src='image/z2UtGA1WggESspi6KOXeo66lvLx.jpg' alt='test'/>")
-// })
 
 server.get("*", (req, res) => {
     res.send("<h1>404 NOT FOUND!</h1>")
