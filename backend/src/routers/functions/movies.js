@@ -1,6 +1,5 @@
 const { projectionFields } = require('../../utils')
 
-
 async function fetchMoviesRouteData(db, page, limit = 12) {
     const skip = (page - 1) * limit
     const data = await db.collection('movie')
@@ -18,9 +17,5 @@ async function fetchMoviesRouteData(db, page, limit = 12) {
 
     return { page, totalResult, totalPages, data }
 }
-
-
-
-
 
 module.exports = fetchMoviesRouteData
